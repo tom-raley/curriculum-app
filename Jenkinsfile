@@ -6,5 +6,17 @@ pipeline {
         git(url: 'https://github.com/tom-raley/curriculum-app', branch: 'dev')
       }
     }
+
+    stage('Log') {
+      steps {
+        steps {
+          sh 'ls -la'
+        }
+      }
+    }
+
+    stage('Build') {
+      sh 'docker build -f curriculum-front/Dockerfile .'
+    }
   }
 }
