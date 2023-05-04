@@ -16,7 +16,9 @@ pipeline {
     }
 
     stage('Build') {
-      sh 'docker build -f curriculum-front/Dockerfile .'
+      steps {
+        sh 'docker build -f curriculum-front/Dockerfile .'
+      }
     }
   }
 }
