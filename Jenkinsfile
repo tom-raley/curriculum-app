@@ -6,5 +6,6 @@ pipeline {
         git(url: 'https://github.com/tom-raley/curriculum-app', branch: 'dev')
       }
     }
+
   }
 }
